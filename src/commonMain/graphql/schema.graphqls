@@ -1,0 +1,24 @@
+"""
+Data update operations.
+"""
+type Mutation {
+    """
+    @internal
+
+    Delete a given model.
+    """
+    deleteModel(id: ID!, field: ModelIdField): Boolean
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    foo: Int
+}
+
+input ModelIdField {
+    a: Boolean
+}
